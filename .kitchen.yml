@@ -23,34 +23,22 @@ provisioner:
     - "--skip-tags=sysctl"
 
 platforms:
-- name: ubuntu-12.04
+- name: centos6-ansible-latest
   driver:
-    image: ubuntu:12.04
-- name: ubuntu-14.04
+    image: rndmh3ro/docker-centos6-ansible:latest
+    platform: centos
+- name: centos6-ansible-19
   driver:
-    image: ubuntu:14.04
-- name: ubuntu-16.04
+    image: rndmh3ro/docker-centos6-ansible:1.9
+    platform: centos
+- name: centos7-ansible-latest
   driver:
-    image: ubuntu:16.04
-    provision_command:
-      - "apt-get install initramfs-tools -y"
-- name: centos-6.6
+    image: rndmh3ro/docker-centos7-ansible:latest
+    platform: centos
+- name: centos7-ansible-19
   driver:
-    image: centos:6.6
-- name: centos-6.7
-  driver:
-    image: centos:6.7
-- name: centos-7
-  driver:
-    image: centos:7
-    privileged: true
-    run_command: /usr/sbin/init
-- name: debian-7
-  driver:
-    image: debian:7
-- name: debian-8
-  driver:
-    image: debian:8
+    image: rndmh3ro/docker-centos6-ansible:1.9
+    platform: centos
 
 verifier:
   name: inspec
@@ -59,7 +47,4 @@ verifier:
     - https://github.com/dev-sec/tests-os-hardening
 
 suites:
-- name: os_ansible_1.9
-  provisioner:
-    ansible_version: 1.9.4
-- name: os_ansible_latest
+- name: os

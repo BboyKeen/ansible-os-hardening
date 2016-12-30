@@ -14,6 +14,10 @@ provisioner:
   roles_path: ../ansible-os-hardening/
   playbook: default.yml
 
+transport:
+  max_ssh_sessions: 5
+
+
 platforms:
 - name: ubuntu-12.04
   driver_config:
@@ -23,6 +27,10 @@ platforms:
   driver_config:
     box: opscode-ubuntu-14.04
     box_url: https://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-14.04_chef-provisionerless.box
+- name: ubuntu-16.04
+  driver_config:
+    box: opscode-ubuntu-16.04
+    box_url: https://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-16.04_chef-provisionerless.box
 - name: centos-6.4
   driver_config:
     box: opscode-centos-6.4
