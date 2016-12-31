@@ -37,8 +37,73 @@ platforms:
     platform: centos
 - name: centos7-ansible-19
   driver:
-    image: rndmh3ro/docker-centos6-ansible:1.9
+    image: rndmh3ro/docker-centos7-ansible:1.9
     platform: centos
+- name: oracle6-ansible-latest
+  driver:
+    image: rndmh3ro/docker-oracle6-ansible:latest
+    platform: centos
+- name: oracle6-ansible-19
+  driver:
+    image: rndmh3ro/docker-oracle6-ansible:1.9
+    platform: centos
+- name: oracle7-ansible-latest
+  driver:
+    image: rndmh3ro/docker-oracle7-ansible:latest
+    platform: centos
+- name: oracle7-ansible-19
+  driver:
+    image: rndmh3ro/docker-oracle7-ansible:1.9
+    platform: centos
+- name: ubuntu1204-ansible-latest
+  driver:
+    image: rndmh3ro/docker-ubuntu1204-ansible:latest
+    platform: ubuntu
+- name: ubuntu1204-ansible-19
+  driver:
+    image: rndmh3ro/docker-ubuntu1204-ansible:1.9
+    platform: ubuntu
+- name: ubuntu1404-ansible-latest
+  driver:
+    image: rndmh3ro/docker-ubuntu1404-ansible:latest
+    platform: ubuntu
+- name: ubuntu1404-ansible-19
+  driver:
+    image: rndmh3ro/docker-ubuntu1404-ansible:1.9
+    platform: ubuntu
+- name: ubuntu1604-ansible-latest
+  driver:
+    image: rndmh3ro/docker-ubuntu1604-ansible:latest
+    platform: ubuntu
+- name: ubuntu1604-ansible-19
+  driver:
+    image: rndmh3ro/docker-ubuntu1604-ansible:1.9
+    platform: ubuntu
+- name: debian7-ansible-latest
+  driver:
+    image: rndmh3ro/docker-debian7-ansible:latest
+    platform: debian
+- name: debian7-ansible-19
+  driver:
+    image: rndmh3ro/docker-debian7-ansible:1.9
+    platform: debian
+- name: debian8-ansible-latest
+  driver:
+    image: rndmh3ro/docker-debian8-ansible:latest
+    platform: debian
+- name: debian8-ansible-19
+  driver:
+    image: rndmh3ro/docker-debian8-ansible:1.9
+    platform: debian
+- name: debian9-ansible-latest
+  driver:
+    image: rndmh3ro/docker-debian9-ansible:latest
+    platform: debian
+- name: debian9-ansible-19
+  driver:
+    image: rndmh3ro/docker-debian9-ansible:1.9
+    platform: debian
+
 
 verifier:
   name: inspec
